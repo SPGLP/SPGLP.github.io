@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>詹姆斯-卡梅隆</title>
+        <script type="text/javascript"> 
+            function show_confirm() 
+            { 
+            var r=confirm("前方恶臭，是否确定进入？！（后果自负）"); 
+            if (r==true) 
+               { 
+                window.location.href = "114514.html"
+               } 
+             else 
+               { 
+
+               } 
+             } 
+        </script> 
+        <!--LSLNB-->
+        <style type="text/css">
+            body{
+                background-color: #fff78b;  /* 背景颜色 */
+                font-family: KaiTi ;    /* 设置字体 */
+            }
+            h1{
+                color: red;     
+                font-size: 2.2em;
+                border-bottom: 2px solid #2a1959;   /* 下边框 */
+            }
+            h2{
+                color: #000dff;
+                font-size: 1.2em;
+                margin-left: 120px;     /*与容器左端的距离*/
+            }
+            /*悬浮框 */
+            #float {
+            position: absolute;
+            top: 50em;
+            z-index: 1;
+            }
+            /*图片大小*/
+            #floatImg {
+            width: 50px;
+            height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="float" onmouseover="clearPos1()" onmouseout="changePos()" onmousedown="show_confirm()">
+            <img id="floatImg" alt="图炸了" src="pictures\float.png">
+            <p>好时代，要来力！</p>
+            </a>
+            </div>
+            <script>
+            var moveX = 0; //X轴方向上移动的距离
+            //var moveY = 0; //Y轴方向上移动的距离
+            var stepX = 5; //图片X轴移动的速度
+            var stepY = 6; //图片Y轴移动的速度
+            var directionX = 0; //设置图片在X轴方向上的移动方向 0:向右 1:向左
+            var directionY = 0; //设置图片在Y轴方向上的移动方向 0:向下 1:向上
+            function changePos() {
+            timer = setInterval(function() {
+            var img = document.getElementById("float"); //获得图片所在层的ID
+            var height = document.documentElement.clientHeight; //浏览器的高度
+            var width = document.documentElement.clientWidth; //浏览器的宽度
+            var imgHeight = document.getElementById("floatImg").height; //飘浮图片的高度
+            var imgWidth = document.getElementById("floatImg").width; //瓢浮图片的宽度
+            //设置飘浮图片距离浏览器左侧位置
+            img.style.left = parseInt(moveX + document.documentElement.scrollLeft) + "px";
+            //设置飘浮图片距离浏览器右侧位置
+            //img.style.top = parseInt(moveY + document.documentElement.scrollTop) + "px";
+            //设置图片在Y轴上的移动规律
+            //if(directionY == 0) {
+            //飘浮图片在Y轴方向上向下移动
+            //moveY += stepY;
+            //} else {
+            //飘浮图片在Y轴方向上向上移动
+            //moveY -= stepY;
+            //}
+            //if(moveY < 0) {
+            //如果飘浮图片飘浮到顶端的时候，设置图片在Y轴方向上向下移动
+            //directionY = 0;
+            //moveY = 0;
+            //}
+            //if(moveY > (height - imgHeight)) {
+            //如果飘浮图片飘浮到浏览器底端的时候，设置图片在Y轴方向上向上移动
+            //directionY = 1;
+            //moveY = (height - imgHeight);
+            //}
+            //设置图片在X轴上的移动规律
+            if(directionX == 0) {
+            moveX += stepX;
+            } else {
+            moveX -= stepX;
+            }
+            if(moveX < 0) {
+            //如果飘浮图片飘浮到浏览器左侧的时候，设置图片在X轴方向上向右移动
+            directionX = 0;
+            moveX = 0;
+            }
+            if(moveX > (width - imgWidth)) {
+            //如果飘浮图片飘浮到浏览器右侧的时候，设置图片在X轴方向上向左移动
+            directionX = 1;
+            moveX = (width - imgWidth);
+            }
+            }, 30)
+            }
+            changePos();
+            function clearPos1() {
+            clearInterval(timer);
+            }
+            function changeArrow() {
+                if(directionX = 0) directionX = 1;
+                if(directionX = 1) directionX = 0;
+                //if(directionY = 0) directionY = 1;
+                //if(directionY = 1) directionY = 0;
+            }
+            </script>
+        <h1>
+            <img src="pictures\Cameron.jpg" alt="picture" />
+            詹姆斯-卡梅隆
+        </h1>
+        <marquee><h2>代表作：《终结者》、《泰坦尼克号》、《阿凡达》、《真实的谎言》等</h2></marquee>
+        <p>詹姆斯·卡梅隆1954年8月16日出生于加拿大<b>安大略省</b>，好莱坞电影导演、编剧。</p>
+        <p>评价： 他在拍摄地是个苛求、专横的“暴君”；在家庭中是个不会体贴并且见异思迁的丈夫；在好莱坞同行看来，卡梅隆是一个偏执狂和烧钱的机器。但不能否认，卡梅隆是个天才。卡梅隆不仅能创造奇迹般的电影票房更是能将商业与艺术并驾齐驱。他的作品往往讨论人与技术之间的关系，令人反思。唯有詹姆斯?卡梅隆才敢在奥斯卡典礼上喊出那句“我是世界之王”因为他是当之无愧的世界之王。</p>
+        <hr>
+        <pre>
+            个人资料
+       
+中文名  詹姆斯·弗朗西斯·卡梅隆     出生地     加拿大安大略省
+外文名  James Cameron                职    业   导演，制片人，编剧
+国  籍  加拿大                       毕业院校   美国加州州立大学
+星  座  狮子座                       代表作品   泰坦尼克号、终结者、异形II、阿凡达
+血  型  O型                          主要成就   奥斯卡最佳导演奖      
+身  高  188cm                                   金球奖最佳导演奖 
+        </pre>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <h3>
+            目录
+        </h3>
+        <ul type="circle" style="color:#0066ff">
+            <li>早年经历</li>
+            <li>导演经历</li>
+            <li>个人生活</li>
+            <li>主要作品</li>
+            <li>获奖记录</li>
+            <li>人物评价</li>
+            <li>伟大作品</li>
+        </ul>
+
+        <p> <a href="https://space.bilibili.com/515014397">联系我们</a>  | 收藏本站 | 人才招聘 | <a href="http://Github.com/" >开源社区</a> | 信息反馈</p>
+
+        <p>&copy;梧州学院 LSLNB</p>
+    </body>
+</html>

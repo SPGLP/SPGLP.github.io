@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>好时代，要来力！</title>
+        <!--LSLNB-->
+        <style type="text/css">
+            body{
+                background-color: #422d00;  /* 背景颜色 */
+                font-family: KaiTi ;    /* 设置字体 */
+            }
+            h1{
+                color: #ffffff;     
+                font-size: 1.2em;
+                border-bottom: 2px solid #a90000;   /* 下边框 */
+            }
+            h2{
+                color: #000dff;
+                font-size: 1.2em;
+                margin-left: 120px;     /*与容器左端的距离*/
+            }
+            h3{
+                color: #ffffff;     
+            }
+            /*悬浮框 */
+            #float {
+            position: absolute;
+            z-index: 1;
+            }
+            /*图片大小*/
+            #floatImg {
+            width: 100px;
+            height: 100px;
+            }
+            #goodmusic{
+                float: right;
+            }
+            #dr_text{
+                font-family: NSimSun;
+                color:aquamarine;
+                font-size: 0.9em;
+                float: right
+            }
+        </style>
+    </head>
+    <body>
+        <div id="float" onmouseover="clearPos1()" onmouseout="changePos()" onmousedown="changeArrow()">
+            <a href="javascript:;">
+            <img id="floatImg" alt="图炸了" src="pictures\float.png">
+            <h3>LSLNB</h3>
+            </a>
+            </div>
+            <script>
+            var moveX = 0; //X轴方向上移动的距离
+            var moveY = 0; //Y轴方向上移动的距离
+            var stepX = 5; //图片X轴移动的速度
+            var stepY = 6; //图片Y轴移动的速度
+            var directionX = 0; //设置图片在X轴方向上的移动方向 0:向右 1:向左
+            var directionY = 0; //设置图片在Y轴方向上的移动方向 0:向下 1:向上
+            function changePos() {
+            timer = setInterval(function() {
+            var img = document.getElementById("float"); //获得图片所在层的ID
+            var height = document.documentElement.clientHeight; //浏览器的高度
+            var width = document.documentElement.clientWidth; //浏览器的宽度
+            var imgHeight = document.getElementById("floatImg").height; //飘浮图片的高度
+            var imgWidth = document.getElementById("floatImg").width; //瓢浮图片的宽度
+            //设置飘浮图片距离浏览器左侧位置
+            img.style.left = parseInt(moveX + document.documentElement.scrollLeft) + "px";
+            //设置飘浮图片距离浏览器右侧位置
+            img.style.top = parseInt(moveY + document.documentElement.scrollTop) + "px";
+            //设置图片在Y轴上的移动规律
+            if(directionY == 0) {
+            //飘浮图片在Y轴方向上向下移动
+            moveY += stepY;
+            } else {
+            //飘浮图片在Y轴方向上向上移动
+            moveY -= stepY;
+            }
+            if(moveY < 0) {
+            //如果飘浮图片飘浮到顶端的时候，设置图片在Y轴方向上向下移动
+            directionY = 0;
+            moveY = 0;
+            }
+            if(moveY > (height - imgHeight)) {
+            //如果飘浮图片飘浮到浏览器底端的时候，设置图片在Y轴方向上向上移动
+            directionY = 1;
+            moveY = (height - imgHeight);
+            }
+            //设置图片在X轴上的移动规律
+            if(directionX == 0) {
+            moveX += stepX;
+            } else {
+            moveX -= stepX;
+            }
+            if(moveX < 0) {
+            //如果飘浮图片飘浮到浏览器左侧的时候，设置图片在X轴方向上向右移动
+            directionX = 0;
+            moveX = 0;
+            }
+            if(moveX > (width - imgWidth)) {
+            //如果飘浮图片飘浮到浏览器右侧的时候，设置图片在X轴方向上向左移动
+            directionX = 1;
+            moveX = (width - imgWidth);
+            }
+            }, 30)
+            }
+            changePos();
+            function clearPos1() {
+            clearInterval(timer);
+            }
+            function changeArrow() {
+                if(directionX = 0) directionX = 1;
+                if(directionX = 1) directionX = 0;
+                if(directionY = 0) directionY = 1;
+                if(directionY = 1) directionY = 0;
+            }
+            </script>
+        <h1>
+            <div id="contain">
+                <marquee>
+                    <pre>
+                        24岁                   是学生                     哼 哼 哼 哼……                       啊~~~~~~~~~~                          
+                    </pre>
+                </marquee>
+            </div>
+            <img src="pictures\114514.webp" alt="picture" />
+            田所浩二
+            <audio id="goodmusic" autoplay="autoplay" controls="controls" preload="auto" src="pictures\music.mp3">动人の小曲放不了，看来要升级浏览器了</audio>
+            <p id="dr_text">你是一个一个一个动人の小曲</p>
+        </h1>
+        <h2>代表作：昏睡レイプ!野獣と化した先辈</h2>
+        <blockquote>
+            <h3>评价： 这部影片的出演人员都是非专业的，因此演技非常糟糕，让人发笑。但是野兽先辈完全不一样，他的演技非常逼真，很自然地将一个无微不至关心后辈的先辈到一个野兽一般的形象表演出来。</h3>
+            <h3>在日本Niconico上火起来后，很多人制作了关于他的音MAD等二次创作作品，先辈也获得了“迫真演技”“野兽般的演技”等称赞。</h3>
+        </blockquote>
+        <br>
+        <br>
+        <br>
+        <blockquote>
+            <p>
+                友情链接：
+                <ul>
+                    <li><a href="https://www.bilibili.com/video/BV1aG411t7Gq?share_source=copy_web&vd_source=ea684497ea66caac47a997e3f7e925f8">会员制餐厅</a></li>
+                    <li><a href="https://www.bilibili.com/video/BV1aG411t7Gq?share_source=copy_web&vd_source=ea684497ea66caac47a997e3f7e925f8">雪</a></li>
+                    <li><a href="https://www.bilibili.com/video/BV1aG411t7Gq?share_source=copy_web&vd_source=ea684497ea66caac47a997e3f7e925f8">昏睡红茶</a></li> 
+                    <li><a href="k-2 copy.html">詹姆斯-卡梅隆</a></li>
+                </ul>
+            </p>
+        </blockquote>
+        <br>
+        <br>
+        <br>
+        <address>
+            <span>LSLNB</span>
+        </address>
+    </body>
+</html>
