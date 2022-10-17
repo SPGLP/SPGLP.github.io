@@ -44,10 +44,10 @@
     <body>
         <div id="float" onmouseover="clearPos1()" onmouseout="changePos()" onmousedown="changeArrow()">
             <a href="javascript:;">
-            <img id="floatImg" alt="图炸了" src="pictures\Ahhh.jpg">
+            <img id="floatImg" alt="图炸力" src="pictures\Ahhh.jpg">
             <h3>LSLNB</h3>
             </a>
-            </div>
+        </div>
             <script>
             var moveX = 0; //X轴方向上移动的距离
             var moveY = 0; //Y轴方向上移动的距离
@@ -111,6 +111,8 @@
                 if(directionX = 1) directionX = 0;
                 if(directionY = 0) directionY = 1;
                 if(directionY = 1) directionY = 0;
+                var audio = document.getElementById("sound");
+                audio.play();
             }
             </script>
         <h1>
@@ -125,12 +127,22 @@
             田所浩二
             <audio id="goodmusic" autoplay="autoplay" controls="controls" preload="auto" src="pictures\music.mp3">动人の小曲放不了，看来要升级浏览器了</audio>
             <p id="dr_text">你是一个一个一个动人の小曲</p>
+            <audio id="sound" src="samples\sound.mp3"></audio> 
         </h1>
         <h2>代表作：昏睡レイプ!野獣と化した先辈</h2>
         <blockquote>
             <h3>评价： 这部影片的出演人员都是非专业的，因此演技非常糟糕，让人发笑。但是野兽先辈完全不一样，他的演技非常逼真，很自然地将一个无微不至关心后辈的先辈到一个野兽一般的形象表演出来。</h3>
             <h3>在日本Niconico上火起来后，很多人制作了关于他的音MAD等二次创作作品，先辈也获得了“迫真演技”“野兽般的演技”等称赞。</h3>
         </blockquote>
+        <pre>
+            个人资料
+       
+中文名  田所浩二；李田所              出生地     日本下北泽
+外文名  James Cameron                职    业   导演，制片人，编剧
+国  籍  日本                         毕业院校   未知
+星  座  狮子座                       代表作品   昏睡レイプ!野獣と化した先辈
+血  型  O型                          主要成就   BiliBili鬼畜明星荣誉殿堂成员      
+身  高  188cm                                  全球HOMO精神领袖
         <br>
         <br>
         <br>
@@ -149,7 +161,7 @@
         <br>
         <br>
         <address>
-            <span>LSLNB</span>
+            <span>纯属搞笑，并无恶意，如有冒犯，还请原谅</span>
         </address>
     </body>
 </html>
