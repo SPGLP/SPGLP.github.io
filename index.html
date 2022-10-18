@@ -15,6 +15,13 @@
                 height: 30px;
                 margin: 0 auto;
             }
+            #spandiv{
+                margin: 0 auto;
+            }
+            #clicktext{
+                color: #fff;
+                text-shadow:  0px 0px 10px black;
+            }
             </style>
     </head>
     <body>
@@ -23,5 +30,35 @@
         <div id="linkpad">
             <p><a href="k-2 copy.html">大会员LSL先生的页面</a>|<a href="123.html">美食家HGJ先生的页面</a></p>
         </div>
+        <div id="spandiv" onmousedown="changetext()">
+            <h1 id="clicktext">您对本店特制的html还满意吗？</h1>
+        </div>
+        <script>
+            var n = 1;
+            var text = document.getElementById("clicktext");
+            function changetext()
+            {
+                if(n<6)
+                {
+                    n += 1;
+                    if(n=1)
+                    {
+                        text.innerHTML="您对本店特制的html还满意吗？";
+                    }
+                    else if(n=2)
+                    {
+                        text.innerHTML="非常的新鲜！非常的美味！";
+                    }
+                    else if(n=3)
+                    {
+                        text.innerHTML="逸一时，误一世";
+                    }
+                } 
+                else 
+                {
+                    n = 0;
+                }
+            }
+        </script>
     </body>
 </html>
