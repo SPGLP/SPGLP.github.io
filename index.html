@@ -12,11 +12,34 @@
             #linkpad{
                 background-color: aliceblue;
                 width: 320px;
-                height: 30px;
-                margin: 0 auto;
+                height: 40px;
+                position: absolute;
+                top:25%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+            }
+            #titletop{
+                position: absolute;
+                /*top:50%;*/
+                left:50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                text-align: center;
             }
             #spandiv{
-                margin: 0 auto;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                text-align: center;
             }
             #clicktext{
                 color: #fff;
@@ -26,7 +49,7 @@
     </head>
     <body>
         <br>
-        <h1 style="margin: 0 auto;">欢迎来到会员制html测试中心，不看完会有惩罚哟！</h1>
+        <h1 id="titletop">欢迎来到会员制html测试中心，不看完会有惩罚哟！</h1>
         <div id="linkpad">
             <p><a href="k-2 copy.html">大会员LSL先生的页面</a>|<a href="123.html">美食家HGJ先生的页面</a></p>
         </div>
@@ -56,11 +79,11 @@
                         text.innerHTML="逸一时，误一世";
                     }
                 } 
-                else 
+                else
                 {
                     n = 0;
                 }
-                inputbox.text="test" ;           
+                inputbox.textContent = "test" ;          
             }
         </script>
     </body>
