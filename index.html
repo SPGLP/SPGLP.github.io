@@ -26,21 +26,23 @@
     </head>
     <body>
         <br>
-        <h1 style="margin-left: 250px;">欢迎来到会员制html测试中心，不看完会有惩罚哟！</h1>
+        <h1 style="margin: 0 auto;">欢迎来到会员制html测试中心，不看完会有惩罚哟！</h1>
         <div id="linkpad">
             <p><a href="k-2 copy.html">大会员LSL先生的页面</a>|<a href="123.html">美食家HGJ先生的页面</a></p>
         </div>
-        <div id="spandiv" onmousedown="changetext()">
+        <div id="spandiv" onclick="changetext()">
             <h1 id="clicktext">您对本店特制的html还满意吗？</h1>
+            <input id="inputbox" type="text" />
         </div>
         <script>
             var n = 1;
-            var text = document.getElementById("clicktext");
             function changetext()
             {
+                var text = document.getElementById("clicktext");
+                var inputbox = document.getElementById("inputbox");
                 if(n<6)
                 {
-                    n += 1;
+                    n++;
                     if(n=1)
                     {
                         text.innerHTML="您对本店特制的html还满意吗？";
@@ -58,6 +60,7 @@
                 {
                     n = 0;
                 }
+                inputbox.text="test" ;           
             }
         </script>
     </body>
