@@ -56,10 +56,11 @@
         <div id="spandiv" onclick="changetext()">
             <h1 id="clicktext">您对本店特制的html还满意吗？</h1>
             <input id="inputbox" type="text" />
+            <button id="OK" onclick="LSLNBweb()">确定</button>
         </div>
         <script>
             var n = 1;
-            function changetext()
+            /*function changetext()
             {
                 var text = document.getElementById("clicktext");
                 var inputbox = document.getElementById("inputbox");
@@ -83,8 +84,12 @@
                 {
                     n = 0;
                 }
-                inputbox.textContent = "test" ;          
+                //inputbox.textContent = "test" ;         
+            }*/ 
+            function LSLNBweb(){
+                window.location.href="LSLNBsite.html"
             }
         </script>
+
     </body>
 </html>
