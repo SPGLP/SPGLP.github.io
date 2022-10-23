@@ -3,10 +3,12 @@
         <title>LSLNB文档布局</title>
     </head>
     <style type="text/css">
+        
         *{
             margin:0 auto;
             padding: 0px;
         }
+        
         body{
             background: url("images\\bg.png") no-repeat center center fixed;
             font-family: SongTi;
@@ -26,21 +28,76 @@
             text-shadow: 0px 0px 20px #00ffff;
             color: white;
         }
+        #content{
+            text-align: center;
+        }
         #nav{
             height: 25px;
             width: 760px;
-            font-size: 14px;
-            
+            font-size: 18px;
             background-color: #00c85d;
         }
+        #nav_list{
+            width: 760px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
         #nav_list li{
-            
-            list-style-type: none;
-            display: inline;
-            margin-left: 160px;
-            
+            /*list-style-type: none;*/
+            list-style: none;
+            float: left;
+            /*margin-left: 160px;*/
+        }
+        #nav_list li a{
+            color:black;
+            text-decoration: none;
+            width: 379px;
+            height: 25px;
+            display: block;
+            line-height: 25px;
+            text-align: center;
+            border-right: 1px white solid;
+        }
+        #nav ul li a:hover{
+            background-color: green;
+            color:white
+        }
+        #nav ul li a.last{
+            border-right: none;
+        }
+        #navButton1{
+            background-color: #00c85d;
+            width: 100px;
+        }
+        #navButton2{
+            background-color: #00c85d;
+            width: 100px;
         }
     </style>
+    <!--<script>
+        function B1_MouseMove_Logic(){
+            var obj = document.getElementById("navButton1");
+            obj.style.backgroundColor = "#009511";
+        }
+        function B1_MouseOut_Logic(){
+            var obj = document.getElementById("navButton1");
+            obj.style.backgroundColor = "#00c85d";
+        }
+        function B1_MouseClick_Logic(){
+            window.location.href="zbkq-LSL.html";
+        }
+        function B2_MouseMove_Logic(){
+            var obj = document.getElementById("navButton2");
+            navButton.style.backgroundColor = "#009511";
+        }
+        function B2_MouseOut_Logic(){
+            var obj = document.getElementById("navButton2");
+            navButton.style.backgroundColor = "#00c85d";
+        }
+        function B2_MouseClick_Logic(){
+            window.location.href="zbkq-HGJ.html";
+        }
+    </script>-->
     <body>
         <div id="header"> 
             <!--<img src="images\headpic.jpg" alt="error" />-->
@@ -48,8 +105,10 @@
         </div>
         <div id="nav">
             <ul id="nav_list">
+                <!--<li><div class="navButton1" onmouseover="B1_MouseMove_Logic()" onmouseout="B1_MouseOut_Logic()" onmousedown="B1_MouseClick_Logic()">LSL的艺术花园</div></li>
+                <li><div class="navButton2" onmouseover="B2_MouseMove_Logic()" onmouseout="B2_MouseOut_Logic()" onmousedown="B2_MouseClick_Logic()">HGJ的艺术花园</div></li>-->
                 <li><a href="zbkq-LSL.html">LSL先生的艺术花园</a></li>
-                <li><a href="zbkq-HGJ.html">HGJ先生的艺术花园</a></li>
+                <li><a href="zbkq-HGJ.html" class="last">HGJ先生的艺术花园</a></li>
             </ul>
         </div>
         <div id="content">
@@ -59,6 +118,9 @@
                         专门为美食家提供美食<span style="color:#ffc400"><b><del>迎宾酒、蔬菜棒、拌面</del></b></span>
                 </pre>
             </marquee>
+        </div>
+        <div style="text-align: center;">
+            <img src="pictures\JTLL.gif" />
         </div>
         <div id="footer">
 
