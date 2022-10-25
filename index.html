@@ -3,15 +3,13 @@
         <title>LSLNB</title>
         <style type="text/css">
             body{
-                background: url("pictures\\Background.jpg") no-repeat center center fixed;
-                        /*兼容浏览器版本*/
-                        -webkit-background-size: cover;
-                        -o-background-size: cover;                
-                        background-size: cover;
+                background: url("pictures\\Background.jpg") no-repeat center center fixed;  /*兼容浏览器版本*/
+                -webkit-background-size: cover;
+                -o-background-size: cover;                
+                background-size: cover;
             }
             #linkpad{
-                background-color: aliceblue;
-                width: 320px;
+                width: 480px;
                 height: 40px;
                 position: absolute;
                 top:25%;
@@ -21,17 +19,94 @@
                 -ms-transform: translate(-50%,-50%);
                 -moz-transform: translate(-50%,-50%);
             }
+            #nav{
+                height: 25px;
+                width: 480px;
+                font-size: 18px;
+                background-color: hsla(0, 0%, 100%, 0.5);
+            }
+            #nav ul{
+                width: 760px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            #nav ul li{
+                list-style: none;
+                float: left;
+            }
+            #nav ul li a{
+                color:black;
+                text-decoration: none;
+                width: 200px;
+                height: 25px;
+                display: block;
+                line-height: 25px;
+                text-align: center;
+                border-right: 1px rgb(132, 132, 132) solid;
+            }
+            #nav ul li a:hover{
+                background-color: yellow;
+                color:#000000;
+                text-shadow: 0px 0px 10px white;
+            }
+            #nav ul li a.last{
+                border-right: none;
+            }
             #titletop{
-                position: absolute;
+                /*position: absolute;*/
                 /*top:50%;*/
-                left:50%;
+                /*left:50%;
                 transform: translate(-50%,-50%);
                 -webkit-transform: translate(-50%,-50%);
                 -ms-transform: translate(-50%,-50%);
-                -moz-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);*/
+                top:0;
+                font-size: 1.2em;
                 text-align: center;
+                text-shadow: 0px 0px 10px yellow;
             }
             #spandiv{
+                position:absolute;
+                width: 100%;
+                height: 150px;
+                top:85%;
+                left:0%;
+                /*transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);*/
+                text-align: center;
+                border: 1px rgb(114, 114, 114) solid;
+                overflow: hidden;  
+            }
+            #clicktext{
+                color: #fff;
+                text-shadow:  0px 0px 10px black;
+            }
+            #spandiv::before{
+                content: "";
+                width: 110%;
+                height: 200px;
+                background: inherit; 
+                position: absolute;
+                left: 0px;  
+                right: 0;
+                top: 0px;   
+                bottom: 0;
+                box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(10px);
+            }
+            #titlebar{
+                background: rgba(158, 105, 0, 0.6);
+                position: fixed;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 40px;
+                z-index: 1;
+                margin-top: 0;
+            }
+            #imgSelect_div{
                 position: absolute;
                 top:50%;
                 left:50%;
@@ -39,24 +114,47 @@
                 -webkit-transform: translate(-50%,-50%);
                 -ms-transform: translate(-50%,-50%);
                 -moz-transform: translate(-50%,-50%);
-                text-align: center;
             }
-            #clicktext{
-                color: #fff;
-                text-shadow:  0px 0px 10px black;
+        </style>
+        <script>
+            //var p1=document.getElementsByClassName("frist");
+            //var p2=document.getElementsByClassName("last");
+            function p1move(){
+                var imgSelect = document.getElementById("imgSelect");
+                imgSelect.src = "pictures\\DeChuan.png";
             }
-            </style>
+            function p2move(){
+                var imgSelect = document.getElementById("imgSelect");
+                imgSelect.src = "pictures\\WoXiuYuan.png";
+            }
+            function moveout(){
+                var imgSelect = document.getElementById("imgSelect");
+                imgSelect.src = "pictures\\Who.jpg";
+            }
+        </script>
     </head>
     <body>
-        <br>
-        <h1 id="titletop">欢迎来到会员制html测试中心，不看完会有惩罚哟！</h1>
+        <div id="titlebar">
+            <h1 id="titletop">欢迎来到会员制html测试中心，不看完会有惩罚哟！</h1>
+        </div>
         <div id="linkpad">
-            <p><a href="k-2 copy.html">大会员LSL先生的页面</a>|<a href="123.html">美食家HGJ先生的页面</a></p>
+            <!--<p><a href="k-2 copy.html">大会员LSL先生的页面</a>|<a href="123.html">美食家HGJ先生的页面</a></p>-->
+            <div id="nav">
+                <ul>
+                    <li><a href="k-2 copy.html" class="frist" onmousemove="p1move()" onmouseout="moveout()">大会员LSL先生的页面</a></li>
+                    <li><a href="123.html" class="last" onmousemove="p2move()" onmouseout="moveout()">美食家HGJ先生的页面</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="imgSelect_div">
+            <img id="imgSelect" src="pictures\Who.jpg" alt="" width="250px" height="225px" />
         </div>
         <div id="spandiv" onclick="changetext()">
-            <h1 id="clicktext">您对本店特制的html还满意吗？</h1>
-            <input id="inputbox" type="text" />
-            <button id="OK" onclick="LSLNBweb()">确定</button>
+            <div style="z-index:1 ;position: relative;">
+                <h1 id="clicktext">您对本店特制的html还满意吗？</h1>
+                <input id="inputbox" type="text" value="十分甚至九分的满意" />
+                <button id="OK" onclick="LSLNBweb()">确定</button>
+            </div>
         </div>
         <script>
             var n = 1;

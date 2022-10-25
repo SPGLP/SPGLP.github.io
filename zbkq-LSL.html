@@ -15,6 +15,27 @@
         opacity: 0.7;
         z-index: -1;
     }
+    #Titlebar{
+        background:rgba(255, 255, 255, 0);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100% ;
+        height: auto;
+    }
+    #Titlebar::before{
+        content: "";
+        width: 110%;
+        height: 110%;
+        background: inherit; 
+        position: absolute;
+        left: 0px;  
+        right: 0;
+        top: 0px;   
+        bottom: 0;
+        /*box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.25);*/
+        backdrop-filter: blur(10px);
+    }
     #content{
         color:#0000a8;
         font-size: 15px;
@@ -32,7 +53,9 @@
         
     }
     #content_div{
-        background: rgba(127, 255, 212, 0.55);
+        background-color: rgba(127, 255, 212, 0.55);
+        width: 100%;
+        left:0%;
         border-radius: 15px;
     }
     #introduction{
@@ -40,17 +63,21 @@
         border-radius: 15px;
         height: 120px;
         margin: 0 auto;
+        overflow: hidden
     }
 </style>
 </head>
 <body>
 
-    
-<h1>现代诗《再别康桥》赏析</h1>
-<audio style="float: right ;" src="samples\jiangnan.mp3" controls="controls" loop="loop" preload="auto">LoadError</audio>
-<p style="float:right ;">冻人的BGM不建议播放，除非你好这口awa</p>
-<p>创作时间:1928年11月06日</p>
-<br>
+<div id="Titlebar">
+    <audio style="float: right ;top: 0;" src="samples\jiangnan.mp3" controls="controls" loop="loop" preload="auto">LoadError</audio>
+    <p style="float:right ;top: 0;color: #a9a9a9;position: relative;"><del>冻人的BGM不建议播放，除非你好这口awa</del></p>
+    <h1 style="position:relative;">现代诗《再别康桥》赏析</h1>
+    <p style="position:relative;">创作时间:1928年11月06日</p>
+</div>
+<div style="height: 10em;">
+    <br>
+</div>
 <div style="text-align: center;">
     <!--<span><img style="border: 2px solid #ceed00;" src="images_zbkq\2-1.jpg" width="284"  height="142"></span>-->
     <embed src="samples\bear.mp4" width="350" height="230"><br>
