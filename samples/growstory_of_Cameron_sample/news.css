@@ -1,7 +1,6 @@
 #Part_3_text{
     width: 550px;
     line-height: 200%;
-    text-align:"left";
     font-size: 13px;
     font-family: "Microsoft YaHei";
     color:#876;
@@ -21,6 +20,7 @@ h1{
 }
 hr{
     background-color: #aaa;
+    box-align:left;
     height: 1px;
     width: 600px;
     text-align: left;
